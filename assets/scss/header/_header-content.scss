@@ -1,0 +1,44 @@
+.header-content {
+    position: relative;
+    
+    &__container {
+        max-width: $ul;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+        
+    }
+    &__title {
+
+        @include lg-min {
+            margin: 0 0 53px;
+        }
+
+        @include lg {
+            margin: 0 0 43px;
+        }
+
+        text-align: center;
+        
+    }
+    
+    
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; 
+        
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__buttons .btn:first-of-type {
+        @include sm-min {
+            margin-right: $gap;
+        }
+        @include sm {
+            margin-bottom: $gap;
+        }
+    }
+}

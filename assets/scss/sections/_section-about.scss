@@ -1,0 +1,121 @@
+.about{
+    letter-spacing: 0.055em;
+    background-color: $color-gray-light;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include md{
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .about__content p {
+            font-size: 1.125rem;
+        }
+    }
+    @include md-sm{
+
+        .about__content p{
+            font-size: $font-size;
+        }
+        
+    }
+
+    @include sm{
+
+        .about__content p{
+            font-size: $font-size;
+        }
+    }
+
+    &__container{
+        max-width: $ul;
+        margin: auto;
+        padding-right: $gap;
+        padding-left: $gap;
+        display: grid;
+        grid-gap: 100px;
+        grid-template-columns: 1fr 271px;
+        
+        @include sm{
+            grid-gap: 20px;
+    grid-template-columns: 1fr;
+        }
+    }
+    &__content{
+        max-width: 936px;
+        position: relative;
+        
+        @include lg-min{
+            font-size: 18px;
+        }
+        @include md{
+            font-size: 16px;
+        }
+    }
+
+    &__image{
+        display: grid;
+        align-content: center;
+        justify-items: center;
+    }
+    &__image img {
+        max-width: 100%;
+        max-height: 480px;
+
+        @include lg-md{
+            max-width: 255px;
+            max-height: 459px;
+        }
+
+        @include md-sm{
+            max-width: 236px;
+            max-height: 425px;
+        }
+    }
+    
+}
+
+p.about__content{
+    max-width: 936px;
+    
+    &:first-of-type{
+        position: relative;
+
+        margin-top: -5px;
+
+        &::after{
+            position: absolute;
+            top: 0;
+            right: -50px;
+            height: 200px;
+            width: 2px;
+            content: "";
+            background-color: rgba($color-gray, 0.1);
+        }
+    }
+}
+h2{
+
+    @include md-sm{
+        margin-bottom: 36px;
+        font-size: 1.5rem;
+    }
+    @include lg-md{
+        margin-bottom: 42px;
+        font-size: 2rem;
+    }
+    @include sm{
+        margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
+    }
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 56px;
+    letter-spacing: 0.1em;
+    color: #2d3651;
+    font-family: $font-header;
+    line-height: 1.2em;
+    font-weight: bold;
+}
